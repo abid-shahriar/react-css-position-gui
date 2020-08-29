@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { PositionContex } from "../App";
+import PositionInput from "./PositionInput";
+import Checkbox from "./Checkbox";
 
 function AbsolutePosition({ visualObject }) {
   const {
@@ -48,28 +50,44 @@ function AbsolutePosition({ visualObject }) {
   return (
     <div className="absolute-position">
       <div className="absolute-position__container">
+        <Checkbox visualObject={visualObject} />
         <label htmlFor="top">Top:</label>
-        <input type="number" onChange={handleTopPosition} placeholder="none" />
-      </div>
-      <div className="absolute-position__container">
-        <label htmlFor="top">Right:</label>
-        <input
+        <PositionInput
+          name="top"
           type="number"
-          onChange={handleRightPosition}
+          handlePositionChange={handleTopPosition}
           placeholder="none"
         />
       </div>
       <div className="absolute-position__container">
-        <label htmlFor="top">Bottom:</label>
-        <input
+        <Checkbox visualObject={visualObject} />
+        <label htmlFor="right">Right:</label>
+        <PositionInput
+          name="right"
           type="number"
-          onChange={handleBottomPosition}
+          handlePositionChange={handleRightPosition}
           placeholder="none"
         />
       </div>
       <div className="absolute-position__container">
-        <label htmlFor="top">Left:</label>
-        <input type="number" onChange={handleLeftPosition} placeholder="none" />
+        <Checkbox visualObject={visualObject} />
+        <label htmlFor="bottom">Bottom:</label>
+        <PositionInput
+          name="bottom"
+          type="number"
+          handlePositionChange={handleBottomPosition}
+          placeholder="none"
+        />
+      </div>
+      <div className="absolute-position__container">
+        <Checkbox visualObject={visualObject} />
+        <label htmlFor="left">Left:</label>
+        <PositionInput
+          name="left"
+          type="number"
+          handlePositionChange={handleLeftPosition}
+          placeholder="none"
+        />
       </div>
     </div>
   );

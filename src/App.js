@@ -15,6 +15,7 @@ function App() {
   const [boxRight, setBoxRight] = useState(null);
   const [boxBottom, setBoxBottom] = useState(null);
   const [boxLeft, setBoxLeft] = useState(null);
+  const [valueUnit, setValueUnit] = useState("%");
 
   const PositionContexvalue = {
     boxPosition,
@@ -37,6 +38,8 @@ function App() {
     setBoxRight,
     setBoxBottom,
     setBoxLeft,
+    valueUnit,
+    setValueUnit,
   };
 
   return (

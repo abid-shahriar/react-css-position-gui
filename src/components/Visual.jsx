@@ -13,9 +13,8 @@ function Visual() {
     boxRight,
     boxBottom,
     boxLeft,
+    valueUnit,
   } = useContext(PositionContex);
-
-  console.log(boxTop);
 
   return (
     <div className="visual-wrapper">
@@ -24,20 +23,20 @@ function Visual() {
           className="box"
           style={{
             position: boxPosition,
-            top: `${boxTop}px`,
-            right: `${boxRight}px`,
-            bottom: `${boxBottom}px`,
-            left: `${boxLeft}px`,
+            top: `${boxTop}${valueUnit}`,
+            right: `${boxRight}${valueUnit}`,
+            bottom: `${boxBottom}${valueUnit}`,
+            left: `${boxLeft}${valueUnit}`,
           }}
         >
           <div
             className="circle"
             style={{
               position: circlePosition,
-              top: `${circleTop}px`,
-              right: `${circleRight}px`,
-              bottom: `${circleBottom}px`,
-              left: `${circleLeft}px`,
+              top: `${circleTop}${valueUnit}`,
+              right: `${circleRight}${valueUnit}`,
+              bottom: `${circleBottom}${valueUnit}`,
+              left: `${circleLeft}${valueUnit}`,
             }}
           ></div>
         </div>
