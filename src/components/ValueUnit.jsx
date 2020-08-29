@@ -11,10 +11,8 @@ function ValueUnit() {
     <div className="value-unit">
       <label htmlFor="value-unit">Value-Unit:</label>
       <select name="value-unit" onChange={handleValueUnitChange}>
+        <option value="%">Percentage (%)</option>
         <option value="px">Pixel (px)</option>
-        <option value="%" selected>
-          Percentage (%)
-        </option>
         <option value="rem">Rem</option>
         <option value="em">EM</option>
       </select>

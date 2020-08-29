@@ -24,7 +24,7 @@ body {
 }
 
 .controls-wrapper {
-  width: 20%;
+  width: 30%;
   height: 100vh;
   @include flexbox(column);
   justify-content: space-evenly;
@@ -32,7 +32,7 @@ body {
 }
 
 .visual-wrapper {
-  width: 80%;
+  width: 70%;
   height: 100vh;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   overflow: hidden;
@@ -128,6 +128,7 @@ body {
   input[type="number"] {
     width: 40%;
     height: 30px;
+    padding: 0 5px;
   }
 }
 
@@ -153,4 +154,31 @@ body {
 
 label {
   font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  #root {
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .controls-wrapper {
+    padding: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+
+    .value-unit {
+      flex-basis: 100%;
+    }
+
+    .control-box {
+      flex-basis: 40%;
+    }
+  }
+
+  .visual-wrapper {
+    width: 100%;
+  }
 }
