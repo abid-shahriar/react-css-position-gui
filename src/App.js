@@ -1,25 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Visual from "./components/Visual";
+import Controls from "./components/Controls";
+
+export const PositionContex = React.createContext();
 
 function App() {
+  const [boxPosition, setBoxPosition] = useState("");
+  const [circlePosition, setCirclePosition] = useState("");
+  const [circleTop, setCircleTop] = useState(null);
+  const [circleRight, setCircleRight] = useState(null);
+  const [circleBottom, setCircleBottom] = useState(null);
+  const [circleLeft, setCircleLeft] = useState(null);
+  const [boxTop, setBoxTop] = useState(null);
+  const [boxRight, setBoxRight] = useState(null);
+  const [boxBottom, setBoxBottom] = useState(null);
+  const [boxLeft, setBoxLeft] = useState(null);
+
+  const PositionContexvalue = {
+    boxPosition,
+    setBoxPosition,
+    circlePosition,
+    setCirclePosition,
+    circleTop,
+    circleRight,
+    circleBottom,
+    circleLeft,
+    setCircleTop,
+    setCircleRight,
+    setCircleBottom,
+    setCircleLeft,
+    boxTop,
+    boxRight,
+    boxBottom,
+    boxLeft,
+    setBoxTop,
+    setBoxRight,
+    setBoxBottom,
+    setBoxLeft,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PositionContex.Provider value={PositionContexvalue}>
+      <Controls />
+      <Visual />
+    </PositionContex.Provider>
   );
 }
 
