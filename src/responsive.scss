@@ -11,6 +11,8 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+    height: auto;
+    gap: 20px;
 
     .value-unit {
       flex-basis: 100%;
@@ -70,6 +72,11 @@
             font-size: 16px;
             font-weight: 400;
           }
+
+          select {
+            font-size: 16px;
+            font-weight: 400;
+          }
         }
 
         .absolute-position {
@@ -83,7 +90,47 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
+  .controls-wrapper {
+    gap: 10px;
+    h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .control-box {
+      min-width: 150px;
+      padding: 5px;
+      .controls {
+        .select-position {
+          label {
+            font-size: 12px;
+            font-weight: 300;
+          }
+
+          select {
+            font-size: 12px;
+            font-weight: 300;
+          }
+        }
+
+        .absolute-position {
+          label {
+            font-size: 12px;
+            font-weight: 12px;
+            width: 35%;
+          }
+
+          input[type="number"] {
+            width: 45%;
+            height: 20px;
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+  }
+
   .visual-wrapper {
     .box-container {
       .box {
