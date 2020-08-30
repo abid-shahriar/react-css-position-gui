@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c1fa31634fc8b00b92dc217a94ecc1da",
+    "revision": "f97eaeb9080a52d2be94bed394516cfb",
     "url": "/react-css-position-gui/index.html"
   },
   {
-    "revision": "b17fc71805bb30dad993",
-    "url": "/react-css-position-gui/static/css/main.0f75ccc8.chunk.css"
+    "revision": "5b36e63d7fc33c95d500",
+    "url": "/react-css-position-gui/static/css/main.cb3d2983.chunk.css"
   },
   {
     "revision": "80a51acc19e129dfdd9d",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-css-position-gui/static/js/2.d2dd5d47.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b17fc71805bb30dad993",
+    "revision": "5b36e63d7fc33c95d500",
     "url": "/react-css-position-gui/static/js/main.87c605f5.chunk.js"
   },
   {
