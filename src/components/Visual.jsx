@@ -1,14 +1,10 @@
 import React, { useContext } from "react";
 import { PositionContex } from "../App";
+import Circle from "./Circle";
 
 function Visual() {
   const {
     boxPosition,
-    circlePosition,
-    circleTop,
-    circleRight,
-    circleBottom,
-    circleLeft,
     boxTop,
     boxRight,
     boxBottom,
@@ -29,16 +25,7 @@ function Visual() {
             left: `${boxLeft}${valueUnit}`,
           }}
         >
-          <div
-            className="circle"
-            style={{
-              position: circlePosition,
-              top: `${circleTop}${valueUnit}`,
-              right: `${circleRight}${valueUnit}`,
-              bottom: `${circleBottom}${valueUnit}`,
-              left: `${circleLeft}${valueUnit}`,
-            }}
-          ></div>
+          <Circle />
         </div>
       </div>
     </div>

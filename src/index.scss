@@ -15,12 +15,15 @@
 
 body {
   font-family: "Noto Serif", serif;
+  background-color: #07202b;
 }
 
 #root {
   min-height: 100vh;
-  width: 100%;
+  max-width: 1400px;
   @include flexbox();
+  margin: 0 auto;
+  box-shadow: 0px 0px 40px rgba(#fff, 0.9);
 }
 
 .controls-wrapper {
@@ -49,6 +52,7 @@ body {
     height: 50%;
     width: 60%;
     border: 5px solid #aaa;
+    background-color: rgba(black, 0.7);
     @include flexbox();
 
     .circle {
@@ -100,6 +104,7 @@ body {
     font-size: 35px;
     margin-bottom: 20px;
     text-transform: capitalize;
+    white-space: nowrap;
   }
 }
 
@@ -116,7 +121,7 @@ body {
     }
   }
 
-  input [type="checkbox"] {
+  input[type="checkbox"] {
     width: 10%;
   }
 
@@ -152,33 +157,22 @@ body {
   }
 }
 
+// general styles
 label {
   font-weight: bold;
 }
 
-@media (max-width: 992px) {
-  #root {
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  .controls-wrapper {
-    padding: 30px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: auto;
-    width: 100%;
-
-    .value-unit {
-      flex-basis: 100%;
-    }
-
-    .control-box {
-      flex-basis: 40%;
-    }
-  }
-
-  .visual-wrapper {
-    width: 100%;
-  }
+input {
+  border-radius: 5px;
+  outline: none;
 }
+
+.unit {
+  margin-left: 5px;
+}
+
+select {
+  border-radius: 2px;
+}
+
+@import "./responsive.scss";

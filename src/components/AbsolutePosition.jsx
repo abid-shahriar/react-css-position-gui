@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { PositionContex } from "../App";
 import PositionInput from "./PositionInput";
 import Checkbox from "./Checkbox";
+import Unit from "./Unit";
 
 function AbsolutePosition({ visualObject }) {
   const {
@@ -58,6 +59,7 @@ function AbsolutePosition({ visualObject }) {
           handlePositionChange={handleTopPosition}
           placeholder="none"
         />
+        <Unit />
       </div>
       <div className="absolute-position__container">
         <Checkbox visualObject={visualObject} />
@@ -68,6 +70,7 @@ function AbsolutePosition({ visualObject }) {
           handlePositionChange={handleRightPosition}
           placeholder="none"
         />
+        <Unit />
       </div>
       <div className="absolute-position__container">
         <Checkbox visualObject={visualObject} />
@@ -78,6 +81,7 @@ function AbsolutePosition({ visualObject }) {
           handlePositionChange={handleBottomPosition}
           placeholder="none"
         />
+        <Unit />
       </div>
       <div className="absolute-position__container">
         <Checkbox visualObject={visualObject} />
@@ -88,6 +92,7 @@ function AbsolutePosition({ visualObject }) {
           handlePositionChange={handleLeftPosition}
           placeholder="none"
         />
+        <Unit />
       </div>
     </div>
   );
