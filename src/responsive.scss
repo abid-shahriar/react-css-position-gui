@@ -14,10 +14,17 @@
     height: auto;
     gap: 20px;
 
+    @supports not (gap: 20px) {
+      .value-unit {
+        margin-bottom: 20px;
+      }
+    }
+
     .value-unit {
       flex-basis: 100%;
       justify-content: center;
       margin-bottom: 0;
+      margin-bottom: 20px;
 
       label {
         margin-right: 10px;
@@ -93,6 +100,17 @@
 @media (max-width: 520px) {
   .controls-wrapper {
     gap: 10px;
+
+    @supports not (gap: 10px) {
+      .value-unit {
+        margin-bottom: 10px;
+      }
+    }
+
+    .value-unit {
+      margin-bottom: 10px;
+    }
+
     h3 {
       font-size: 16px;
       margin-bottom: 5px;
