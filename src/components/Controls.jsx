@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import ControlBox from "./ControlBox";
-import { PositionContex } from "../App";
+import { PositionContex } from "../contexts/AppStates";
 import ValueUnit from "./ValueUnit";
 
 function Controls() {

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { PositionContex } from "../App";
+import { PositionContex } from "../contexts/AppStates";
 import Circle from "./Circle";
 
 function Visual() {
